@@ -60,13 +60,23 @@
             </graph>
         </field>
     </record>
+    <record id="hr_attendance_theoretical_view_tree" model="ir.ui.view">
+        <field name="model">hr.attendance.theoretical.time.report</field>
+        <field name="arch" type="xml">
+            <tree edit="0" create="0">
+                <field name="employee_id" />
+                <field name="date" />
+                <field name="worked_hours" widget="float_time" />
+            </tree>
+        </field>
+    </record>
     <record id="hr_attendance_theoretical_action" model="ir.actions.act_window">
         <field name="name">Theoretical vs Attended Time Analysis</field>
         <field name="res_model">hr.attendance.theoretical.time.report</field>
         <field
             name="context"
         >{'search_default_previous_month': 1, 'search_default_current_month': 1, 'search_default_my': 1}</field>
-        <field name="view_mode">pivot,graph</field>
+        <field name="view_mode">pivot,graph,tree</field>
     </record>
     <record id="hr_attendance.menu_hr_attendance_report" model="ir.ui.menu">
         <field
