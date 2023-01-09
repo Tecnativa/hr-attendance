@@ -10,7 +10,7 @@
     "license": "AGPL-3",
     "author": "ForgeFlow S.L.," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/hr-attendance",
-    "depends": ["hr_attendance"],
+    "depends": ["base_hr_attendance"],
     "data": [
         "views/assets.xml",
         "views/hr_attendance_views.xml",

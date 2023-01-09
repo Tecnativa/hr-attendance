@@ -6,9 +6,13 @@
         inherit_id="web.assets_backend"
     >
         <xpath expr="." position="inside">
-            <script
+            <!-- <script
                 type="text/javascript"
                 src="/hr_attendance_geolocation/static/src/js/attendance_geolocation.js"
+            /> -->
+            <script
+                type="text/javascript"
+                src="/hr_attendance_geolocation/static/src/js/my_attendances.js"
             />
         </xpath>
     </template>
