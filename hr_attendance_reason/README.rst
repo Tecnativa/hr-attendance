@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ====================
 HR Attendance Reason
 ====================
@@ -17,7 +13,7 @@ HR Attendance Reason
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-LGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-LGPL--3-blue.png
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fhr--attendance-lightgray.png?logo=github
@@ -35,9 +31,9 @@ HR Attendance Reason
 This module allows to define reasons why the attendance is not what
 expected. Some example reasons are
 
-- Could not access the system: Visit a customer
-- Leave soon to pick up children
-- The Hr manager amended the attendance and needs to tell
+-  Could not access the system: Visit a customer
+-  Leave soon to pick up children
+-  The Hr manager amended the attendance and needs to tell
 
 **Table of contents**
 
@@ -74,21 +70,21 @@ Authors
 Contributors
 ------------
 
-- Odoo S.A.
-- Aaron Henriquez <ahforgeflow@forgeflow.com>
-- Damien Crier <damien.crier@camtocamp.com>
-- Saran Lim. <saranl@ecosoft.co.th>
-- David Alonso <david.alonso@solvos.es>
-- Juany Davila <juany.davila@forgeflow.com>
-- `Tecnativa <https://www.tecnativa.com>`__:
+-  Odoo S.A.
+-  Aaron Henriquez <ahforgeflow@forgeflow.com>
+-  Damien Crier <damien.crier@camtocamp.com>
+-  Saran Lim. <saranl@ecosoft.co.th>
+-  David Alonso <david.alonso@solvos.es>
+-  Juany Davila <juany.davila@forgeflow.com>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  - Víctor Martínez
-  - Carlos Lopez
+   -  Víctor Martínez
+   -  Carlos Lopez
 
-- Dhara Solanki <dhara.solanki@initos.com>
-- `manaTec <https://www.manatec.de/>`__:
+-  Dhara Solanki <dhara.solanki@initos.com>
+-  `manaTec <https://www.manatec.de/>`__:
 
-  - Tom Tietze
+   -  Tom Tietze
 
 Maintainers
 -----------

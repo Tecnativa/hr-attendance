@@ -58,6 +58,13 @@
                     </div>
                 </setting>
             </xpath>
+            <xpath expr="//field[@name='auto_check_out']" position="after">
+                <div class="text-muted" invisible="not auto_check_out">
+                    This reason will be added to an attendance
+                    when it's autoclosed.
+                </div>
+                <field name="auto_check_out_reason_id" invisible="not auto_check_out" />
+            </xpath>
         </field>
     </record>
 </odoo>

@@ -1,4 +1,4 @@
-# Copyright 2023 Tecnativa - Víctor Martínez
+# Copyright 2023-2025 Tecnativa - Víctor Martínez
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
 from odoo import fields, models
@@ -18,5 +18,9 @@ class ResConfigSettings(models.TransientModel):
     )
     reason_on_attendance_screen_default_sign_out = fields.Many2one(
         related="company_id.reason_on_attendance_screen_default_sign_out",
+        readonly=False,
+    )
+    auto_check_out_reason_id = fields.Many2one(
+        related="company_id.auto_check_out_reason_id",
         readonly=False,
     )

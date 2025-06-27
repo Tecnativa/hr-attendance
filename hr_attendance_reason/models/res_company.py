@@ -1,4 +1,4 @@
-# Copyright 2023 Tecnativa - Víctor Martínez
+# Copyright 2023-2025 Tecnativa - Víctor Martínez
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
 from odoo import fields, models
@@ -30,4 +30,7 @@ class ResCompany(models.Model):
             ("show_on_attendance_screen", "=", True),
         ],
         check_company=True,
+    )
+    auto_check_out_reason_id = fields.Many2one(
+        "hr.attendance.reason",
     )

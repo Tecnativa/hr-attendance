@@ -1,9 +1,11 @@
 # Copyright 2017 Odoo S.A.
 # Copyright 2018 ForgeFlow, S.L.
-# Copyright 2023 Tecnativa - Víctor Martínez
+# Copyright 2023-2025 Tecnativa - Víctor Martínez
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
 from datetime import datetime
+
+from freezegun import freeze_time
 
 from odoo.tests import new_test_user, users
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT as DF
@@ -59,3 +61,25 @@ class TestHrAttendanceReason(BaseCommon):
             attendance_reason_id=self.att_reason_out.id
         )._attendance_action_change({})
         self.assertIn(self.att_reason_out, attendance.attendance_reason_ids)
+
+    @freeze_time("2025-01-01 20:00:00")
+    def test_cron_auto_check_out(self):
+        attendance = (
+            self.env["hr.attendance"]
+            .sudo()
+            .create(
+                {
+                    "employee_id": self.user.employee_id.id,
+                    "check_in": "2025-01-01 01:00:00",
+                    "attendance_reason_ids": [(4, self.att_reason_in.id)],
+                }
+            )
+        )
+        self.env.company.auto_check_out = True
+        self.env.company.auto_check_out_tolerance = 1
+        out_reason = self.env.ref("hr_attendance_reason.hr_attendance_reason_check_out")
+        self.env.company.auto_check_out_reason_id = out_reason
+        self.env["hr.attendance"]._cron_auto_check_out()
+        self.assertTrue(attendance.check_out)
+        self.assertEqual(attendance.out_mode, "auto_check_out")
+        self.assertIn(out_reason, attendance.attendance_reason_ids)
